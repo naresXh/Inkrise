@@ -11,6 +11,7 @@ import {
   FaUndoAlt,
   FaRedoAlt,
   FaDownload,
+  FaMicrophone,
 } from "react-icons/fa";
 import { LuRectangleHorizontal } from "react-icons/lu";
 import { TOOL_ITEMS } from "../../constants";
@@ -25,7 +26,7 @@ const Toolbar = () => {
     const data = canvas.toDataURL("image/png");
     const anchor = document.createElement("a");
     anchor.href = data;
-    anchor.download = "Board.png";
+    anchor.download = "AI-Board.png";
     anchor.click();
   };
 
@@ -96,6 +97,9 @@ const Toolbar = () => {
       </div>
       <div className={classes.toolItem} onClick={handleClickDownload}>
         <FaDownload />
+      </div>
+      <div className={classes.toolItem}>
+        <FaMicrophone />
       </div>
     </div>
   );

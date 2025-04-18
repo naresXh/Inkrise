@@ -1,17 +1,27 @@
 .container {
-  @apply absolute left-1/2 top-5 px-3 py-2 flex rounded border border-gray-400;
+  @apply absolute left-1/2 top-5 flex px-4 py-3 rounded-xl;
   transform: translateX(-50%);
-  box-shadow: 1px 0 10px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  z-index: 50;
 }
 
 .toolItem {
-  @apply flex justify-center items-center text-xl p-3 text-black mr-5 last:mr-0 cursor-pointer;
+  @apply flex justify-center items-center text-xl w-10 h-10 mx-2 text-gray-800 cursor-pointer transition-all duration-200 ease-in-out;
+  border-radius: 12px;
+  background: transparent;
 }
 
 .toolItem:hover {
-  @apply bg-blue-50 text-gray-700 rounded;
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.1);
 }
 
 .toolItem.active {
-  @apply bg-blue-200 text-gray-700 rounded;
+  background: linear-gradient(145deg, #6c63ff, #8e7eff);
+  box-shadow: 0 4px 12px rgba(108, 99, 255, 0.5);
+  color: white;
+  transform: scale(1.15);
 }
